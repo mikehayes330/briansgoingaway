@@ -1,17 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-</head>
-<body>
-    
-    
-</body>
-</html>
-
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -25,8 +12,31 @@
       <h1 class="title">
         What is Brian looking at?(click to find out!)
       </h1>
-      <a href="dickCloud.html"><img src="images/brian.jpg" alt="brian at the ledges on the beach" ></a>
+      <a href="javascript:openSite()"><img src="images/brian.jpg" alt="brian at the ledges on the beach" ></a>
     </div>
   </section>
+  <script>
+    function openSite() {
+    var links = [
+                  "dickCloud.html",
+                  "second.html",
+                  "third.html",
+                  "fourth.html"]
+    
+                openSite = function() {
+                  // get a random number between 0 and the number of links
+                  var randIdx = Math.random() * links.length;
+
+                  
+                  // round it, so it can be used as array index
+                  randIdx = parseInt(randIdx, 10);
+                  // construct the link to be opened
+                  var link = links[randIdx];
+                  window.open(link, "_self");
+                  };
+                  
+        
+    }
+    </script>
   </body>
 </html>
